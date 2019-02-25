@@ -175,7 +175,7 @@ _**Catatan:**_ _Commit & push source code jawaban soal ini (beserta screenshot p
 Disediakan __4 buah dataset (.csv)__ seputar persentase balita di Indonesia yang pernah mendapatkan imunisasi __BCG, Campak, DPT & Polio__ dalam kurun tahun 1995-2017. Unduh dataset via kaggle: [unduh di sini](https://www.kaggle.com/lintangwisesa/balita-terimunisasi-di-indonesia-bps-19952017), lalu buatlah sebuah program __python__ yang dapat menampilkan data-data tersebut dalam bentuk sebagai berikut:
 
 - Data yang _missing_ diolah dengan metode __interpolasi linear__, yakni jika terdapat nilai __'n.a'__ akan diubah menjadi __nilai antara data sebelum & sesudahnya__. 
-    > _Tips:_ gunakan method __interpolate( )__ dari __pandas__).
+    > _Tips:_ gunakan method ```interpolate()``` dari __pandas__).
 
 - Usai program dieksekusi, akan muncul __2 buah figure__ sekaligus. Figure 1 berisi data __persentase balita yang pernah diimunisasi__, dan figure 2 berisi __persentase balita yang belum pernah diimunisasi__.
 

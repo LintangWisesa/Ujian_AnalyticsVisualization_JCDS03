@@ -82,9 +82,112 @@ _**Catatan:**_ _Commit & push source code jawaban soal ini (beserta screenshot p
 
 #
 
-### **Soal 3 - coming soon**
+### **Soal 3 - Dosen & Mahasiswa**
 
-### **Soal 4 - coming soon**
+1. Tuliskan langkah-langkah/urutan query MongoDB untuk membuat sebuah database Non-RDBMS (Document Store) dengan spesifikasi sebagai berikut:
+
+    - Terdapat sebuah database dengan nama __"Kampus"__.
+    - Database __"Kampus"__ memiliki 2 buah user:
+        - User pertama adalah admin database bernama __"andi"__, dengan password __"anditopsecret"__. 
+        - User kedua bukanlah admin, namun tetap dapat memasukkan & membaca data dari database. User kedua bernama __"budi"__, dengan password __"buditopsecret"__.
+    - Database __"Kampus"__ memiliki 2 buah collection: __"Dosen"__ dan __"Mahasiswa"__.
+    - Masukkan 3 buah data berikut ke collection __"Dosen"__:
+
+        ```javascript
+        {nama:"Caca",
+        usia:28,
+        asal:"Jakarta",
+        bidang:"Fisika Astrologi",
+        titel:"S2",
+        status:"Honorer",
+        nip:123,
+        matkul:["Metrologi","Kosmologi","Kalkulus"]}
+
+        {nama:"Dedi",
+        usia:29,
+        asal:"Yogyakarta",
+        bidang:"Fisika Terapan",
+        titel:"S3",
+        status:"PNS",
+        nip:456,
+        matkul:["Instrumentasi","Elektronika","Fisika Dasar"]}
+
+        {nama:"Euis",
+        usia:30,
+        asal:"Bandung",
+        bidang:"Fisika Teoretik",
+        titel:"S1",
+        status:"Honorer",
+        nip:789,
+        matkul:["Fisika Dasar","Fisika Modern","Kalkulus"]}
+        ```
+
+    - Masukkan 3 buah data berikut ke collection __"Mahasiswa"__:
+
+        ```javascript
+        {nama:"Faza",
+        usia:19,
+        asal:"Aceh",
+        prodi:"Fisika",
+        angkatan:2017,
+        nim:123}
+
+        {nama:"Gilang",
+        usia:20,
+        asal:"Semarang",
+        prodi:"Fisika",
+        angkatan:2017,
+        nim:456}
+
+        {nama:"Hanafi",
+        usia:19,
+        asal:"Makassar",
+        prodi:"Fisika",
+        angkatan:2017,
+        nim:789}
+        ```
+
+    - Ketik jawaban dari soal nomor 3.1 ini dalam file __.txt__!
+
+2. Dengan __pyMongo__, __matplotlib__ & __pandas__, buatlah sebuah program __python__ yang dapat mengakses dan menampilkan: 
+    - __Nama, asal, usia & status__ dari daftar dosen & mahasiswa di collection tersebut. Output yang diharapkan berupa __2 buah dataframe__ sebagai berikut:
+        ```bash
+                 asal  nama      status  usia
+        0     Jakarta  Caca       dosen    28
+        1  Yogyakarta  Dedi       dosen    29
+        2     Bandung  Euis       dosen    30
+
+               asal    nama      status  usia
+        0      Aceh    Faza   mahasiswa    19
+        1  Semarang  Gilang   mahasiswa    20
+        2  Makassar  Hanafi   mahasiswa    19
+        ```
+    - Sekaligus menampilkan __diagram batang__ usia dari dosen & mahasiswa. Output yang diharapkan sebagai berikut:
+
+    ![soal_dosmhs](./UsiaDosMhs.png)
+
+_**Catatan:**_ _Commit & push source code jawaban soal ini (beserta screenshot plot figure) ke __Github__ Anda, buatlah repo dengan nama __Ujian_DosenMahasiswa__. Kemudian lampirkan __url link repo Github__ Anda via email ke lintang@purwadhika.com!_
+
+#
+
+### **Soal 4 - Imunisasi**
+
+Disediakan __4 buah dataset (.csv)__ seputar persentase balita di Indonesia yang pernah mendapatkan imunisasi __BCG, Campak, DPT & Polio__ dalam kurun tahun 1995-2017. Unduh dataset via kaggle: [unduh di sini](https://www.kaggle.com/lintangwisesa/balita-terimunisasi-di-indonesia-bps-19952017), lalu buatlah sebuah program __python__ yang dapat menampilkan data-data tersebut dalam bentuk sebagai berikut:
+
+- Data yang _missing_ diolah dengan metode __interpolasi linear__, yakni jika terdapat nilai __'n.a'__ akan diubah menjadi __nilai antara data sebelum & sesudahnya__. 
+    > _Tips:_ gunakan method __interpolate( )__ dari __pandas__).
+
+- Usai program dieksekusi, akan muncul __2 buah figure__ sekaligus. Figure 1 berisi data __persentase balita yang pernah diimunisasi__, dan figure 2 berisi __persentase balita yang belum pernah diimunisasi__.
+
+- Setiap figure berisi __4 buah diagram batang__ yang menunjukkan persentase balita yang pernah diimunisasi __BCG, Campak, DPT & Polio__ selama 1995-2017. Output yang diharapkan digambarkan sebagai berikut:
+
+    > *Figure 1*: __Persentasi balita terimunisasi 1995-2017__
+    ![soal_imun](./balita_imunisasi.png)
+
+    > *Figure 2*: __Persentase balita tak terimunisasi 1995-2017__
+    ![soal_nonimun](./balita_tak_imunisasi.png)
+
+_**Catatan:**_ _Commit & push source code jawaban soal ini (beserta screenshot plot figure) ke __Github__ Anda, buatlah repo dengan nama __Ujian_Imunisasi__. Kemudian lampirkan __url link repo Github__ Anda via email ke lintang@purwadhika.com!_
 
 #
 
